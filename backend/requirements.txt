@@ -1,0 +1,15 @@
+numpy
+pandas
+matplotlib
+scikit-learn
+Pillow
+fastapi
+tensorflow
+keras
+python-multipart
+openpyxl
+lightgbm
+
+uvicorn[standard]
+aiofiles
+python-multipart

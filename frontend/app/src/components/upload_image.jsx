@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const UploadImage = () => {
   const [previewImage, setPreviewImage] = useState("");
+  const [resultText, setResultText] = useState("");
 
   const handleFileInputChange = (event) => {
     const file = event.target.files[0];
@@ -16,11 +17,21 @@ const UploadImage = () => {
     }
   };
 
-  const handleUploadClick = () => {
-    // Implement your upload logic here
-    // This function will be called when the "Upload Image" button is clicked
-    // You can send the previewImage to your server or perform any other actions
-    console.log("Upload Image clicked");
+  const handleUploadClick = async () => {
+    const formData = new FormData();
+    formData.append("file", document.getElementById("fileInput").files[0]);
+
+    try {
+      const response = await fetch("http://localhost:8000/upload/", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await response.json();
+      console.log(data.text);
+      setResultText(data.text);
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   return (
@@ -60,6 +71,12 @@ const UploadImage = () => {
           Upload Image
         </button>
       </div>
+
+      {resultText && (
+        <div className="mt-4 text-center">
+          <p>{resultText}</p>
+        </div>
+      )}
     </div>
   );
 };
