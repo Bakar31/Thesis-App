@@ -74,7 +74,7 @@ const UploadImage = () => {
 
       {resultText && (
         <div className="mt-4 text-center">
-          <p>{resultText}</p>
+          <p className="font-bold">{resultText}</p>
         </div>
       )}
     </div>

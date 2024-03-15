@@ -240,7 +240,7 @@ const DataCollectForm = () => {
             <button
               type="button"
               onClick={collectData}
-              className="btn btn-active btn-primary"
+              className="border p-2 rounded-lg bg-green-500 text-white"
             >
               Submit
             </button>
