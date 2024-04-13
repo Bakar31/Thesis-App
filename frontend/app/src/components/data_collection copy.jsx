@@ -174,7 +174,7 @@ const DataCollectForm = () => {
           <button
             type="button"
             onClick={collectData}
-            className="btn btn-active btn-primary"
+            className="btn btn-active btn-success"
           >
             Submit
           </button>
