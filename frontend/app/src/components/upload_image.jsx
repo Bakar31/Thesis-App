@@ -34,6 +34,21 @@ const UploadImage = () => {
     }
   };
 
+  const handleCaptureClick = async () => {
+    try {
+      const response = await fetch("http://192.168.1.6/capture", {
+        method: "GET",
+      });
+      const imageData = await response.blob();
+      const imageUrl = URL.createObjectURL(imageData);
+      setPreviewImage(imageUrl);
+      // setResultText("Image captured successfully!");
+    } catch (error) {
+      console.error("Error:", error);
+      // setResultText("Error capturing image. Please try again.");
+    }
+  };
+
   return (
     <div id="uploadArea" className="flex flex-col items-center space-y-4">
       <input
@@ -63,6 +78,13 @@ const UploadImage = () => {
         >
           Select Image
         </label>
+        <button
+          id="uploadBtn"
+          onClick={handleCaptureClick}
+          className="bg-green-500 text-white py-2 px-4 rounded cursor-pointer hover:bg-green-600"
+        >
+          Capture Image
+        </button>
         <button
           id="uploadBtn"
           onClick={handleUploadClick}

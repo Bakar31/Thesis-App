@@ -1,10 +1,11 @@
 import pickle
+
 import numpy as np
 from keras.models import load_model
 from tensorflow.keras.preprocessing import image
 
 # load the trained model
-model = load_model('./weights/model_.81.h5')
+model = load_model('./weights/model.h5')
 
 with open('./weights/plan_model.pkl', 'rb') as file:
     plan_model = pickle.load(file)

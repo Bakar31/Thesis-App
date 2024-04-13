@@ -240,7 +240,7 @@ const DataCollectForm = () => {
             <button
               type="button"
               onClick={collectData}
-              className="btn btn-active btn-primary"
+              className=" bg-green-500 border rounded-lg px-2 py-2"
             >
               Submit
             </button>
