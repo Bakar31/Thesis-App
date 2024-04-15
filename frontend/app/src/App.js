@@ -7,15 +7,17 @@ import Plan3 from "./components/plan_3";
 import Plan4 from "./components/plan_4";
 import Plan5 from "./components/plan_5";
 import Plan6 from "./components/plan_6";
+import Navbar from "./components/navbar/navbar";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <Navbar />
         <div className="flex flex-col space-y-5">
-          <Link to={"/"} className="text-center text-3xl font-bold">
+          {/* <Link to={"/"} className="text-center text-3xl font-bold">
             Treatment Plan Generation
-          </Link>
+          </Link> */}
           <Routes>
             <Route
               path="/"
