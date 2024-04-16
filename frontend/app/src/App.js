@@ -16,16 +16,13 @@ function App() {
       <div className="App">
         {/* <Navbar /> */}
         <div className="flex flex-col space-y-5">
-          {/* <Link to={"/"} className="text-center text-3xl font-bold">
-            Treatment Plan Generation
-          </Link> */}
           <Header />
           <Routes>
             <Route
               path="/"
               element={
                 <div className="flex flex-row">
-                  <UploadImage/>
+                  <UploadImage />
                   <DataCollectForm />
                 </div>
               }

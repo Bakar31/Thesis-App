@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { LuImagePlus } from "react-icons/lu";
+import { RiQrScan2Line } from "react-icons/ri";
+import { FaUpload } from "react-icons/fa";
 
 const UploadImage = () => {
   const [previewImage, setPreviewImage] = useState("");
@@ -72,23 +75,23 @@ const UploadImage = () => {
         <label
           htmlFor="fileInput"
           id="fileInputBtn"
-          className="bg-blue-500 text-white py-2 px-4 rounded cursor-pointer hover:bg-blue-600"
+          className="bg-blue-500 text-white py-2 px-2 rounded cursor-pointer hover:bg-blue-600"
         >
-          Select Image
+          <LuImagePlus size={25} />
         </label>
         <button
           id="uploadBtn"
           onClick={handleCaptureClick}
-          className="bg-green-500 text-white py-2 px-4 rounded cursor-pointer hover:bg-green-600"
+          className="bg-indigo-500 text-white py-2 px-2 rounded cursor-pointer hover:bg-indigo-600"
         >
-          Capture Image
+          <RiQrScan2Line size={25} />
         </button>
         <button
           id="uploadBtn"
           onClick={handleUploadClick}
-          className="bg-green-500 text-white py-2 px-4 rounded cursor-pointer hover:bg-green-600"
+          className="bg-green-500 text-white py-2 px-2 rounded cursor-pointer hover:bg-green-600"
         >
-          Upload Image
+          <FaUpload size={25} />
         </button>
       </div>
 

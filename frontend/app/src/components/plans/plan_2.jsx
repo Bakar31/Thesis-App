@@ -115,7 +115,9 @@ const Plan2 = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Comprehensive Rehabilitation Plan</h1>
+      <h1 className="text-2xl font-bold mb-4">
+        Comprehensive Rehabilitation Plan
+      </h1>
       <article class="prose">
         <div className="max-w-screen-2xl w-screen">
           <RemirrorEditorLive
