@@ -8,24 +8,26 @@ import Plan4 from "./components/plan_4";
 import Plan5 from "./components/plan_5";
 import Plan6 from "./components/plan_6";
 import Navbar from "./components/navbar/navbar";
+import Header from "./components/Header";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="flex flex-col space-y-5">
           {/* <Link to={"/"} className="text-center text-3xl font-bold">
             Treatment Plan Generation
           </Link> */}
+          <Header />
           <Routes>
             <Route
               path="/"
               element={
-                <>
-                  <UploadImage />
+                <div className="flex flex-row">
+                  <UploadImage/>
                   <DataCollectForm />
-                </>
+                </div>
               }
             ></Route>
             <Route path="/plans/1" element={<Plan1 />}></Route>

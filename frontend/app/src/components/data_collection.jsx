@@ -46,7 +46,7 @@ const DataCollectForm = () => {
     <div>
       <div id="datacollectform" className="p-4 flex gap-4">
         <form id="healthForm" className="space-y-4 space-x-4">
-          <label htmlFor="age" className="text-black text-lg font-semibold">
+          <label htmlFor="age" className="text-black text-lg font-semibold w-1/3">
             Age:
           </label>
           <input

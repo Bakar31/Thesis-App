@@ -42,15 +42,13 @@ const UploadImage = () => {
       const imageData = await response.blob();
       const imageUrl = URL.createObjectURL(imageData);
       setPreviewImage(imageUrl);
-      // setResultText("Image captured successfully!");
     } catch (error) {
       console.error("Error:", error);
-      // setResultText("Error capturing image. Please try again.");
     }
   };
 
   return (
-    <div id="uploadArea" className="flex flex-col items-center space-y-4">
+    <div id="uploadArea" className="flex flex-col items-center space-y-4 w-1/2">
       <input
         type="file"
         id="fileInput"
