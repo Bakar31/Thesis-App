@@ -1,10 +1,11 @@
 import io
+
 import pandas as pd
 import tensorflow as tf
-from pydantic import BaseModel
-from fastapi import FastAPI, Request, UploadFile, File
+from fastapi import FastAPI, File, Request, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-from infer import model, plan_model, process_for_infer, getPlan
+from infer import getPlan, model, plan_model, process_for_infer
+from pydantic import BaseModel
 
 app = FastAPI()
 
@@ -15,6 +16,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 class HealthData(BaseModel):
     age: int
@@ -39,7 +41,7 @@ async def upload_image(file: UploadFile = File(...)):
     image_bytes_io = io.BytesIO(tf_encoded_image.numpy())
 
     subtype = process_for_infer(image_bytes_io)
-    text = f'Ischemic Stroke subtype for the given image is: {subtype}'
+    text = f"Ischemic Stroke subtype for the given image is: {subtype}"
 
     return {"text": text}
 
@@ -52,5 +54,5 @@ async def predict_plan(data: HealthData):
 
     plan = getPlan(new_data)
     # text = f'The recommended Treatment plan for this patient is: {str(plan[0])}'
-    text = str(plan[0])
-    return {'result': text}
+    text = str(plan)
+    return {"result": text}
