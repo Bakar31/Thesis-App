@@ -6,9 +6,11 @@ import { FaUpload } from "react-icons/fa";
 const UploadImage = () => {
   const [previewImage, setPreviewImage] = useState("");
   const [resultText, setResultText] = useState("");
+  const [selectedFile, setSelectedFile] = useState(null);
 
   const handleFileInputChange = (event) => {
     const file = event.target.files[0];
+    console.log({ file: file });
     if (file) {
       const reader = new FileReader();
       reader.onload = () => {
@@ -17,12 +19,18 @@ const UploadImage = () => {
         }
       };
       reader.readAsDataURL(file);
+      setSelectedFile(file);
     }
   };
 
   const handleUploadClick = async () => {
+    if (!selectedFile) {
+      console.error("No file selected");
+      return;
+    }
+
     const formData = new FormData();
-    formData.append("file", document.getElementById("fileInput").files[0]);
+    formData.append("file", selectedFile);
 
     try {
       const response = await fetch("http://localhost:8000/upload/", {
@@ -30,7 +38,7 @@ const UploadImage = () => {
         body: formData,
       });
       const data = await response.json();
-      console.log(data.text);
+      console.log(data);
       setResultText(data.text);
     } catch (error) {
       console.error("Error:", error);
@@ -39,12 +47,18 @@ const UploadImage = () => {
 
   const handleCaptureClick = async () => {
     try {
-      const response = await fetch("http://192.168.1.6/capture", {
+      const response = await fetch("http://192.168.223.53/capture", {
         method: "GET",
       });
       const imageData = await response.blob();
       const imageUrl = URL.createObjectURL(imageData);
       setPreviewImage(imageUrl);
+
+      const capturedFile = new File([imageData], "captured_image.png", {
+        type: "image/jpeg",
+      });
+
+      setSelectedFile(capturedFile);
     } catch (error) {
       console.error("Error:", error);
     }

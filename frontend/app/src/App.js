@@ -1,8 +1,8 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import UploadImage from "./components/upload_image";
 import DataCollectForm from "./components/data_collection";
 import Plan1 from "./components/plans/plan_1";
-import Plan2 from "./components/plan_2";
+import Plan2 from "./components/plans/plan_2";
 import Plan3 from "./components/plan_3";
 import Plan4 from "./components/plan_4";
 import Plan5 from "./components/plan_5";

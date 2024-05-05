@@ -35,8 +35,10 @@ class HealthData(BaseModel):
 
 @app.post("/upload/")
 async def upload_image(file: UploadFile = File(...)):
+    print("hello!")
     contents = await file.read()
     tf_image = tf.image.decode_image(contents)
+    print(tf_image.shape)
     tf_encoded_image = tf.io.encode_jpeg(tf_image)
     image_bytes_io = io.BytesIO(tf_encoded_image.numpy())
 
