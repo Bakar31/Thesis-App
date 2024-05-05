@@ -43,10 +43,10 @@ const DataCollectForm = () => {
   };
 
   return (
-    <div class="max-w-4xl mx-auto p-4">
-      <div class="grid grid-cols-3 gap-4">
-        <div class="col-span-2">
-          <label for="age" class="block text-lg font-semibold text-black">
+    <div className="max-w-4xl mx-auto p-4">
+      <div className="grid grid-cols-3 gap-4">
+        <div className="col-span-2">
+          <label for="age" className="block text-lg font-semibold text-black">
             Age:
           </label>
           <input
@@ -54,21 +54,21 @@ const DataCollectForm = () => {
             id="age"
             name="age"
             required
-            class="form-input border border-gray-300 rounded-md"
+            className="form-input border border-gray-300 rounded-md"
             value={formData.age}
             onChange={handleInputChange}
           />
         </div>
 
         <div>
-          <label for="sex" class="block text-lg font-semibold text-black">
+          <label for="sex" className="block text-lg font-semibold text-black">
             Sex:
           </label>
           <select
             id="sex"
             name="sex"
             required
-            class="form-select border border-gray-300 rounded-md w-full"
+            className="form-select border border-gray-300 rounded-md w-full"
             value={formData.sex}
             onChange={handleInputChange}
           >
@@ -80,7 +80,7 @@ const DataCollectForm = () => {
         <div>
           <label
             for="strokeType"
-            class="block text-lg font-semibold text-black"
+            className="block text-lg font-semibold text-black"
           >
             Stroke Type:
           </label>
@@ -88,7 +88,7 @@ const DataCollectForm = () => {
             id="strokeType"
             name="strokeType"
             required
-            class="form-select border border-gray-300 rounded-md w-full"
+            className="form-select border border-gray-300 rounded-md w-full"
             value={formData.strokeType}
             onChange={handleInputChange}
           >
@@ -98,14 +98,14 @@ const DataCollectForm = () => {
         </div>
 
         <div>
-          <label for="smoker" class="block text-lg font-semibold text-black">
+          <label for="smoker" className="block text-lg font-semibold text-black">
             Smoker:
           </label>
           <select
             id="smoker"
             name="smoker"
             required
-            class="form-select border border-gray-300 rounded-md w-full"
+            className="form-select border border-gray-300 rounded-md w-full"
             value={formData.smoker}
             onChange={handleInputChange}
           >
@@ -117,7 +117,7 @@ const DataCollectForm = () => {
         <div>
           <label
             for="arrhythmia"
-            class="block text-lg font-semibold text-black"
+            className="block text-lg font-semibold text-black"
           >
             Arrhythmia:
           </label>
@@ -125,7 +125,7 @@ const DataCollectForm = () => {
             id="arrhythmia"
             name="arrhythmia"
             required
-            class="form-select border border-gray-300 rounded-md w-full"
+            className="form-select border border-gray-300 rounded-md w-full"
             value={formData.arrhythmia}
             onChange={handleInputChange}
           >
@@ -135,14 +135,14 @@ const DataCollectForm = () => {
         </div>
 
         <div>
-          <label for="diabetics" class="block text-lg font-semibold text-black">
+          <label for="diabetics" className="block text-lg font-semibold text-black">
             Diabetics:
           </label>
           <select
             id="diabetics"
             name="diabetics"
             required
-            class="form-select border border-gray-300 rounded-md w-full"
+            className="form-select border border-gray-300 rounded-md w-full"
             value={formData.diabetics}
             onChange={handleInputChange}
           >
@@ -154,7 +154,7 @@ const DataCollectForm = () => {
         <div>
           <label
             for="hypertension"
-            class="block text-lg font-semibold text-black"
+            className="block text-lg font-semibold text-black"
           >
             Hypertension:
           </label>
@@ -162,7 +162,7 @@ const DataCollectForm = () => {
             id="hypertension"
             name="hypertension"
             required
-            class="form-select border border-gray-300 rounded-md w-full"
+            className="form-select border border-gray-300 rounded-md w-full"
             value={formData.hypertension}
             onChange={handleInputChange}
           >
@@ -172,14 +172,14 @@ const DataCollectForm = () => {
         </div>
 
         <div>
-          <label for="obesity" class="block text-lg font-semibold text-black">
+          <label for="obesity" className="block text-lg font-semibold text-black">
             Obesity:
           </label>
           <select
             id="obesity"
             name="obesity"
             required
-            class="form-select border border-gray-300 rounded-md w-full"
+            className="form-select border border-gray-300 rounded-md w-full"
             value={formData.obesity}
             onChange={handleInputChange}
           >
@@ -189,14 +189,14 @@ const DataCollectForm = () => {
         </div>
 
         <div>
-          <label for="tia" class="block text-lg font-semibold text-black">
+          <label for="tia" className="block text-lg font-semibold text-black">
             Transient ischemic attack:
           </label>
           <select
             id="tia"
             name="tia"
             required
-            class="form-select border border-gray-300 rounded-md w-full"
+            className="form-select border border-gray-300 rounded-md w-full"
             value={formData.tia}
             onChange={handleInputChange}
           >
@@ -206,14 +206,14 @@ const DataCollectForm = () => {
         </div>
 
         <div>
-          <label for="osa" class="block text-lg font-semibold text-black">
+          <label for="osa" className="block text-lg font-semibold text-black">
             OSA:
           </label>
           <select
             id="osa"
             name="osa"
             required
-            class="form-select border border-gray-300 rounded-md w-full"
+            className="form-select border border-gray-300 rounded-md w-full"
             value={formData.osa}
             onChange={handleInputChange}
           >
@@ -223,14 +223,14 @@ const DataCollectForm = () => {
         </div>
 
         <div>
-          <label for="cs" class="block text-lg font-semibold text-black">
+          <label for="cs" className="block text-lg font-semibold text-black">
             Carotid stenosis:
           </label>
           <select
             id="cs"
             name="cs"
             required
-            class="form-select border border-gray-300 rounded-md w-full"
+            className="form-select border border-gray-300 rounded-md w-full"
             value={formData.cs}
             onChange={handleInputChange}
           >
@@ -240,7 +240,7 @@ const DataCollectForm = () => {
         </div>
 
         <div>
-          <label for="npstrokes" class="block text-lg font-semibold text-black">
+          <label for="npstrokes" className="block text-lg font-semibold text-black">
             Number of previous strokes:
           </label>
           <input
@@ -248,34 +248,34 @@ const DataCollectForm = () => {
             id="npstrokes"
             name="npstrokes"
             required
-            class="form-input border border-gray-300 rounded-md w-full"
+            className="form-input border border-gray-300 rounded-md w-full"
             value={formData.npstrokes}
             onChange={handleInputChange}
           />
         </div>
       </div>
 
-      <div class="mt-8 flex gap-4">
+      <div className="mt-8 flex gap-4">
         <button
           type="button"
           onClick={collectData}
-          class="bg-green-500 text-white px-4 py-2 rounded-lg font-semibold"
+          className="bg-green-500 text-white px-4 py-2 rounded-lg font-semibold"
         >
           Submit
         </button>
         {planResult && planResult !== "6" && (
           <a
             href={`/plans/${planResult}`}
-            class="border-2 border-blue-400 rounded-md px-4 py-2 text-blue-400 font-semibold"
+            className="border-2 border-blue-400 rounded-md px-4 py-2 text-blue-400 font-semibold"
           >
             Get the Base Plan
           </a>
         )}
       </div>
 
-      <div class="mt-8 text-center">
+      <div className="mt-8 text-center">
         {planResult && planResult !== "6" && (
-          <div class="text-2xl font-serif">
+          <div className="text-2xl font-serif">
             <p>{`Base Plan: ${planResult}`}</p>
             <p className="text-red-500 text-lg">
               This plan is not intended to be implemented directly on the
@@ -287,7 +287,7 @@ const DataCollectForm = () => {
         )}
 
         {planResult && planResult === "6" && (
-          <div class="text-3xl font-serif">
+          <div className="text-3xl font-serif">
             <p className="text-red-500 text-xl">
               This situation presents a challenge for automated systems to
               address adequately. To ensure optimal care, the doctor should
