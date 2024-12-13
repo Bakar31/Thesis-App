@@ -17,7 +17,6 @@ def process_for_infer(path):
     img = image.load_img(path, target_size=(640, 640))
     img_array = image.img_to_array(img)
     img_array = np.expand_dims(img_array, axis=0)
-    # pred = model.predict(img_array)
     pred = model.predict(img_array).flatten()[0]
 
     if pred >= 0.5:

@@ -35,7 +35,6 @@ class HealthData(BaseModel):
 
 @app.post("/upload/")
 async def upload_image(file: UploadFile = File(...)):
-    print("hello!")
     contents = await file.read()
     tf_image = tf.image.decode_image(contents)
     print(tf_image.shape)
@@ -55,6 +54,5 @@ async def predict_plan(data: HealthData):
     new_data = [[int(i) for i in new_data]]
 
     plan = getPlan(new_data)
-    # text = f'The recommended Treatment plan for this patient is: {str(plan[0])}'
     text = str(plan)
     return {"result": text}
