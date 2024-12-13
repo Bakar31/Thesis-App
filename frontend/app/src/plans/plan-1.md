@@ -1,4 +1,0 @@
-# Patient Name:
-
-### Date:
-
