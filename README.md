@@ -19,6 +19,9 @@ The healthcare burden caused by stroke, particularly ischemic stroke, is substan
 This application serves as a platform to showcase our research results in a user-friendly and practical manner.
 
 ### Tech stack
+- Tensorflow
+- Sciki-learn
+- Opencv
 - React
 - FastAPI
 - Tailwindcss
