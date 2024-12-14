@@ -20,8 +20,8 @@ This application serves as a platform to showcase our research results in a user
 
 ### Tech stack
 - Tensorflow
-- Sciki-learn
-- Opencv
+- Scikit-learn
+- Open-cv
 - React
 - FastAPI
 - Tailwindcss
